@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "dgSpecHash": "OQgmH2eraqg=",
+  "success": true,
+  "projectFilePath": "D:\\ilearning\\task3\\task3\\Task3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sergio\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
+    "C:\\Users\\Sergio\\.nuget\\packages\\consoletables\\2.7.0\\consoletables.2.7.0.nupkg.sha512",
+    "C:\\Users\\Sergio\\.nuget\\packages\\wcwidth\\1.0.0\\wcwidth.1.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"BouncyCastle.Cryptography\" 2.2.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-8xfc-gm6g-vgpv",
+      "libraryId": "BouncyCastle.Cryptography",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"BouncyCastle.Cryptography\" 2.2.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m44j-cfrm-g8qc",
+      "libraryId": "BouncyCastle.Cryptography",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"BouncyCastle.Cryptography\" 2.2.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-v435-xc8x-wvr9",
+      "libraryId": "BouncyCastle.Cryptography",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}
