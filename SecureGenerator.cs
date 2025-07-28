@@ -17,11 +17,6 @@ namespace Task3
             return RandomNumberGenerator.GetBytes(length);
         }
 
-        public static int GenerateSecureRandomInt(int minValue, int maxValue)
-        {
-            return RandomNumberGenerator.GetInt32(minValue, maxValue);
-        }
-
         public static string HmacSha3(byte[] secretkey, int message)
         {
             var hmac = new HMac(new Sha3Digest(256));

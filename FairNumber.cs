@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+
 namespace Task3
 {
     public static class FairNumber
@@ -6,7 +8,7 @@ namespace Task3
         {
             Console.WriteLine("I selected a random value in the range 0..5");
 
-            int introll1 = SecureKeyGenerator.GenerateSecureRandomInt(0, 6);
+            int introll1 = RandomNumberGenerator.GetInt32(0, 6);
             byte[] securekeyroll1 = SecureKeyGenerator.GenerateSecureKey(32);
             var hmac = SecureKeyGenerator.HmacSha3(securekeyroll1, introll1);
             Console.WriteLine($"(HMAC={hmac})");

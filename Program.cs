@@ -1,4 +1,5 @@
 ﻿using System.IO.Pipes;
+using System.Security.Cryptography;
 using Task3;
 
 class Program
@@ -40,7 +41,7 @@ class Program
         Console.WriteLine("I selected a random value in the range 0..1");
 
         byte[] securekey = SecureKeyGenerator.GenerateSecureKey(32);
-        int randomInt = SecureKeyGenerator.GenerateSecureRandomInt(0, 2);
+        int randomInt = RandomNumberGenerator.GetInt32(0, 2);
         string hmac = SecureKeyGenerator.HmacSha3(securekey, randomInt);
         Console.WriteLine($"(HMAC={hmac})");
 
@@ -54,8 +55,6 @@ class Program
             key = menu.DisplayMenu(1);
         }
 
-        // if (int.TryParse(key.ToString(), out int userGuess))
-        // {
         if (userGuess == randomInt)
         {
             Console.WriteLine("Congratulations! You guessed my number.");
@@ -67,15 +66,10 @@ class Program
             Console.WriteLine("I make the first move.");
 
         }
-        // }
-        // else
-        // {
-        //     key = menu.DisplayMenu(1);
-        // }
 
         Console.WriteLine($"(KEY={Convert.ToHexString(securekey)})");
 
-        Dice dice1;
+        Dice dice1 = new Dice();
         int dice1Index;
         if (howStart == 1)
         {
@@ -91,19 +85,19 @@ class Program
         }
         else
         {
-            dice1Index = SecureKeyGenerator.GenerateSecureRandomInt(0, diceCounts.Count);
+            dice1Index = RandomNumberGenerator.GetInt32(0, diceCounts.Count);
             dice1 = new Dice { Values = diceCounts.ElementAt(dice1Index).Value };
             Console.WriteLine($"I selected dice {dice1Index}: {string.Join(", ", dice1.Values)}");
         }
 
         diceCounts.Remove(diceCounts.ElementAt(dice1Index).Key);
 
-        Dice dice2;
+        Dice dice2 = new Dice();
         int dice2Index;
 
         if (howStart == 1)
         {
-            dice2Index = SecureKeyGenerator.GenerateSecureRandomInt(0, diceCounts.Count);
+            dice2Index = RandomNumberGenerator.GetInt32(0, diceCounts.Count);
             dice2 = new Dice { Values = diceCounts.ElementAt(dice2Index).Value };
             Console.WriteLine($"I selected dice {dice2Index}: {string.Join(", ", dice2.Values)}");
         }
@@ -127,17 +121,20 @@ class Program
 
         var fairnumber2 = FairNumber.GetFairNumber(menu);
 
-        if (fairnumebr1 > fairnumber2 && howStart == 1)
+        var facedice1 = dice1!.Values.Select(v => fairnumebr1).FirstOrDefault();
+        var facedice2 = dice2!.Values.Select(v => fairnumber2).FirstOrDefault();
+
+        if (facedice1 > facedice2 && howStart == 1)
         {
-            Console.WriteLine($"You win ({fairnumebr1} > {fairnumber2})");
+            Console.WriteLine($"You win ({facedice1} > {facedice2})");
         }
-        else if (fairnumebr1 == fairnumber2)
+        else if (facedice1 == facedice2)
         {
             Console.WriteLine($"DRAW!");
         }
         else
         {
-            Console.WriteLine($"Computer win ({fairnumber2} > {fairnumebr1})");
+            Console.WriteLine($"Computer win ({facedice2} > {facedice1})");
         }
 
     }
