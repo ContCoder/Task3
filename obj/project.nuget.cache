@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QDqsMeKNui8=",
+  "dgSpecHash": "YHZO4LtkTC4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+  "projectFilePath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sergio_contreras\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\sergio_contreras\\.nuget\\packages\\consoletables\\2.7.0\\consoletables.2.7.0.nupkg.sha512",
@@ -13,9 +13,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "El paquete \"BouncyCastle.Cryptography\" 2.2.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-8xfc-gm6g-vgpv",
-      "projectPath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "projectPath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "filePath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "libraryId": "BouncyCastle.Cryptography",
       "targetGraphs": [
         "net9.0"
@@ -25,9 +25,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "El paquete \"BouncyCastle.Cryptography\" 2.2.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-m44j-cfrm-g8qc",
-      "projectPath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "projectPath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "filePath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "libraryId": "BouncyCastle.Cryptography",
       "targetGraphs": [
         "net9.0"
@@ -37,9 +37,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "El paquete \"BouncyCastle.Cryptography\" 2.2.1 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-v435-xc8x-wvr9",
-      "projectPath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "projectPath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "filePath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "libraryId": "BouncyCastle.Cryptography",
       "targetGraphs": [
         "net9.0"

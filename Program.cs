@@ -115,26 +115,36 @@ class Program
 
         Console.WriteLine("Let's roll the dices!");
 
-        var fairnumebr1 = FairNumber.GetFairNumber(menu);
+        var fairnumber1 = FairNumber.GetFairNumber(menu);
 
         Console.WriteLine("Lets roll the second dice.");
 
         var fairnumber2 = FairNumber.GetFairNumber(menu);
 
-        var facedice1 = dice1!.Values.Select(v => fairnumebr1).FirstOrDefault();
-        var facedice2 = dice2!.Values.Select(v => fairnumber2).FirstOrDefault();
+        var facedice1 = dice1!.Values[fairnumber1];
+        var facedice2 = dice2!.Values[fairnumber2];
 
-        if (facedice1 > facedice2 && howStart == 1)
+        bool userWins = false;
+        if (howStart == 1)
         {
-            Console.WriteLine($"You win ({facedice1} > {facedice2})");
-        }
-        else if (facedice1 == facedice2)
-        {
-            Console.WriteLine($"DRAW!");
+            userWins = facedice1 > facedice2;
         }
         else
         {
-            Console.WriteLine($"Computer win ({facedice2} > {facedice1})");
+            userWins = facedice2 > facedice1;
+        }
+
+        if (facedice1 == facedice2)
+        {
+            Console.WriteLine("DRAW!");
+        }
+        else if (userWins)
+        {
+            Console.WriteLine($"You win ({(howStart == 1 ? facedice1 : facedice2)} > {(howStart == 1 ? facedice2 : facedice1)})");
+        }
+        else
+        {
+            Console.WriteLine($"Computer win ({(howStart == 1 ? facedice2 : facedice1)} > {(howStart == 1 ? facedice1 : facedice2)})");
         }
 
     }

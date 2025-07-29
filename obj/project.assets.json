@@ -112,11 +112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "projectUniqueName": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "projectName": "Task3",
-      "projectPath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\Task3.csproj",
+      "projectPath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\Task3.csproj",
       "packagesPath": "C:\\Users\\sergio_contreras\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sergio_contreras\\side\\project\\task3\\obj\\",
+      "outputPath": "C:\\Users\\sergio_contreras\\Side\\Project\\Task3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
