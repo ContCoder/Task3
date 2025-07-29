@@ -4,7 +4,7 @@ namespace Task3
 {
     public static class FairNumber
     {
-        public static int GetFairNumber( MenuSelection menu)
+        public static int GetFairNumber(MenuSelection menu)
         {
             Console.WriteLine("I selected a random value in the range 0..5");
 
@@ -15,16 +15,19 @@ namespace Task3
 
             Console.WriteLine("Add your number modulo 6.");
             var keyroll1 = menu.DisplayMenu(5);
-            if (int.TryParse(keyroll1.ToString(), out int roll1Guess))
+            int roll1Guess;
+            while (!int.TryParse(keyroll1.ToString(), out roll1Guess))
             {
-                Console.WriteLine($"You selected: {roll1Guess}");
+                keyroll1 = menu.DisplayMenu(5);
             }
+            Console.WriteLine($"You selected: {roll1Guess}");
+
             Console.WriteLine($"My number is: {introll1}");
-            Console.WriteLine($"KEY= ({Convert.ToHexString(securekeyroll1) })");
+            Console.WriteLine($"KEY= ({Convert.ToHexString(securekeyroll1)})");
 
             int fairvalue1 = (introll1 + roll1Guess) % 6;
             Console.WriteLine("The fair number is: " + fairvalue1);
-        return fairvalue1;
+            return fairvalue1;
         }
     }
 }

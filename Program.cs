@@ -76,11 +76,13 @@ class Program
             Console.WriteLine("Select your dice.");
             var keydice1 = menu.DisplayMenu(diceCounts.Count() - 1, diceCounts.Values.Select(v => string.Join(", ", v)).ToArray());
 
-            if (int.TryParse(keydice1.ToString(), out dice1Index))
+            while (!int.TryParse(keydice1.ToString(), out dice1Index))
             {
-                dice1 = new Dice { Values = diceCounts.ElementAt(dice1Index).Value };
-                Console.WriteLine($"You selected dice {dice1Index}: {string.Join(", ", dice1.Values)}");
+                keydice1 = menu.DisplayMenu(diceCounts.Count() - 1, diceCounts.Values.Select(v => string.Join(", ", v)).ToArray());
             }
+
+            dice1 = new Dice { Values = diceCounts.ElementAt(dice1Index).Value };
+            Console.WriteLine($"You selected dice {dice1Index}: {string.Join(", ", dice1.Values)}");
 
         }
         else
@@ -105,12 +107,12 @@ class Program
         {
             Console.WriteLine("Select your dice.");
             var keydice2 = menu.DisplayMenu(diceCounts.Count() - 1, diceCounts.Values.Select(v => string.Join(", ", v)).ToArray());
-
-            if (int.TryParse(keydice2.ToString(), out dice2Index))
+            while (!int.TryParse(keydice2.ToString(), out dice2Index))
             {
-                dice2 = new Dice { Values = diceCounts.ElementAt(dice2Index).Value };
-                Console.WriteLine($"You selected dice {dice2Index}: {string.Join(", ", dice2.Values)}");
+                keydice2 = menu.DisplayMenu(diceCounts.Count() - 1, diceCounts.Values.Select(v => string.Join(", ", v)).ToArray());
             }
+            dice2 = new Dice { Values = diceCounts.ElementAt(dice2Index).Value };
+            Console.WriteLine($"You selected dice {dice2Index}: {string.Join(", ", dice2.Values)}");
         }
 
         Console.WriteLine("Let's roll the dices!");
